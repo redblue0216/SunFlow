@@ -1,0 +1,18 @@
+====
+介绍
+====
+SunFlow是一个生产级的轻量工作流管理工具，主要功能提供算法应用快捷组织功能，主要技术使用基于pluggy的hook技术。
+
+**主要技术**：
+
+	* property动态属性
+	* 基于pluggy的hook
+	* __call__
+	* __add__
+	* cache_dict
+
+
+
+
+
+

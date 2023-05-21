@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-cn" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sunflow package &mdash; sunflow 0.1.1 文档</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="prev" title="code" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            sunflow
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">code</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">sunflow package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-sunflow.hook">sunflow.hook module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">模块介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">使用示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">类说明</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-sunflow.io">sunflow.io module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">模块介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">使用示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">类说明</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-sunflow.node">sunflow.node module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id7">模块介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">使用示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">类说明</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-sunflow.runner">sunflow.runner module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id10">模块介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">使用示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">类说明</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-sunflow.scheduler">sunflow.scheduler module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id13">模块介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">使用示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id15">类说明</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-sunflow">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">sunflow</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">code</a></li>
+      <li class="breadcrumb-item active">sunflow package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/sunflow.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sunflow-package">
+<h1>sunflow package<a class="headerlink" href="#sunflow-package" title="Permalink to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="module-sunflow.hook">
+<span id="sunflow-hook-module"></span><h2>sunflow.hook module<a class="headerlink" href="#module-sunflow.hook" title="Permalink to this heading">¶</a></h2>
+<section id="id1">
+<h3>模块介绍<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
+<p>这是一个钩子挂载管理类，主要功能管理挂载钩子函数，主要技术静态方法</p>
+<p>设计模式：</p>
+<blockquote>
+<div><p>无</p>
+</div></blockquote>
+<p>关键点：</p>
+<blockquote>
+<div><p>（1）hook技术</p>
+</div></blockquote>
+<p>主要功能：</p>
+<blockquote>
+<div><p>（1）插件管理</p>
+</div></blockquote>
+</section>
+<section id="id2">
+<h3>使用示例<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
+</section>
+<section id="id3">
+<h3>类说明<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="sunflow.hook.HookManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sunflow.hook.</span></span><span class="sig-name descname"><span class="pre">HookManager</span></span><a class="headerlink" href="#sunflow.hook.HookManager" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个钩子挂载管理类，主要功能管理挂载钩子函数，主要技术静态方法</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="sunflow.hook.HookManager.create_hook_manager">
+<span class="sig-name descname"><span class="pre">create_hook_manager</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sunflow.hook.HookManager.create_hook_manager" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个创建挂载管理器的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>无</p>
+</dd>
+<dt>返回：</dt><dd><p>hook_manager (object): hook管理器对象</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sunflow.hook.HookManager.get_hook_manager_instance">
+<span class="sig-name descname"><span class="pre">get_hook_manager_instance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sunflow.hook.HookManager.get_hook_manager_instance" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个获取挂载管理器实例的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>无</p>
+</dd>
+<dt>返回：</dt><dd><p>hook_manager (object): 已匹配好相关插件对象的hook管理器对象</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sunflow.hook.HookManager.register_plugins">
+<span class="sig-name descname"><span class="pre">register_plugins</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hook_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sunflow.hook.HookManager.register_plugins" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个注册插件对象的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>hook_manager (object): hook管理器对象</p>
+</dd>
+<dt>返回：</dt><dd><p>hook_manager (object): 已注册了插件对象的hook管理器对象</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sunflow.hook.LocalDataCatalogPlugin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sunflow.hook.</span></span><span class="sig-name descname"><span class="pre">LocalDataCatalogPlugin</span></span><a class="headerlink" href="#sunflow.hook.LocalDataCatalogPlugin" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个本地数据目录插件类，主要功能数据缓存保存、加载操作</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="sunflow.hook.LocalDataCatalogPlugin.collect_parameter_data_before_node_run_locally">
+<span class="sig-name descname"><span class="pre">collect_parameter_data_before_node_run_locally</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">catalog</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sunflow.hook.LocalDataCatalogPlugin.collect_parameter_data_before_node_run_locally" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个运行前收集参数的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>catalog (object): 数据目录对象
+inputs (list): 输入参数列表</p>
+</dd>
+<dt>返回：</dt><dd><p>data_dict (dict): 数据字典</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sunflow.hook.LocalDataCatalogPlugin.store_cache_data_after_node_run_locally">
+<span class="sig-name descname"><span class="pre">store_cache_data_after_node_run_locally</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">catalog</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_objects</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sunflow.hook.LocalDataCatalogPlugin.store_cache_data_after_node_run_locally" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个运行后保存缓存数据的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>catalog (object): 数据目录对象
+outputs (list): 输出参数列表
+data_objects (list): 数据对象列表</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 运行结果信息</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sunflow.hook.LocalDatacatalogSpecs">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sunflow.hook.</span></span><span class="sig-name descname"><span class="pre">LocalDatacatalogSpecs</span></span><a class="headerlink" href="#sunflow.hook.LocalDatacatalogSpecs" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个本地数据目录接口类</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="sunflow.hook.LocalDatacatalogSpecs.collect_parameter_data_before_node_run_locally">
+<span class="sig-name descname"><span class="pre">collect_parameter_data_before_node_run_locally</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">catalog</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sunflow.hook.LocalDatacatalogSpecs.collect_parameter_data_before_node_run_locally" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个运行前收集参数的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>catalog (object): 数据目录对象
+inputs (list): 输入参数列表</p>
+</dd>
+<dt>返回：</dt><dd><p>data_dict (dict): 数据字典</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sunflow.hook.LocalDatacatalogSpecs.store_cache_data_after_node_run_locally">
+<span class="sig-name descname"><span class="pre">store_cache_data_after_node_run_locally</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">catalog</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_objects</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sunflow.hook.LocalDatacatalogSpecs.store_cache_data_after_node_run_locally" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个运行后保存缓存数据的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>catalog (object): 数据目录对象
+outputs (list): 输出参数列表
+data_objects (list): 数据对象列表</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 运行结果信息</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="module-sunflow.io">
+<span id="sunflow-io-module"></span><h2>sunflow.io module<a class="headerlink" href="#module-sunflow.io" title="Permalink to this heading">¶</a></h2>
+<section id="id4">
+<h3>模块介绍<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h3>
+<p>这是一个数据目录对象类，主要功能缓存数据，主要技术orderdict</p>
+<p>设计模式：</p>
+<blockquote>
+<div><p>无</p>
+</div></blockquote>
+<p>关键点：</p>
+<blockquote>
+<div><p>（1）orderdict</p>
+</div></blockquote>
+<p>主要功能：</p>
+<blockquote>
+<div><p>（1）数据缓存</p>
+</div></blockquote>
+</section>
+<section id="id5">
+<h3>使用示例<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h3>
+</section>
+<section id="id6">
+<h3>类说明<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="sunflow.io.BaseDataCatalog">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sunflow.io.</span></span><span class="sig-name descname"><span class="pre">BaseDataCatalog</span></span><a class="headerlink" href="#sunflow.io.BaseDataCatalog" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个数据目录对象基类，主要功能缓存数据，主要技术orderdict</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="sunflow.io.BaseDataCatalog.load">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sunflow.io.BaseDataCatalog.load" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个加载数据的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>data_name (str): 数据集名称</p>
+</dd>
+<dt>返回：</dt><dd><p>data_obj (object): 数据集对象</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sunflow.io.BaseDataCatalog.release">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sunflow.io.BaseDataCatalog.release" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个释放数据空间的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>data_name (str): 数据集名称</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 运行结果信息</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sunflow.io.BaseDataCatalog.save">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sunflow.io.BaseDataCatalog.save" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个保存数据的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>data_name (str): 数据集名称
+data_obj (object): 数据集对象</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 运行结果信息</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sunflow.io.LocalDataCatalog">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sunflow.io.</span></span><span class="sig-name descname"><span class="pre">LocalDataCatalog</span></span><a class="headerlink" href="#sunflow.io.LocalDataCatalog" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#sunflow.io.BaseDataCatalog" title="sunflow.io.BaseDataCatalog"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDataCatalog</span></code></a></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个数据目录对象类，主要功能缓存数据，主要技术orderdict</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="sunflow.io.LocalDataCatalog.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sunflow.io.LocalDataCatalog.load" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个加载数据的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>data_name (str): 数据集名称</p>
+</dd>
+<dt>返回：</dt><dd><p>data_obj (object): 数据集对象</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sunflow.io.LocalDataCatalog.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sunflow.io.LocalDataCatalog.release" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个释放数据空间的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>data_name (str): 数据集名称</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 运行结果信息</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sunflow.io.LocalDataCatalog.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sunflow.io.LocalDataCatalog.save" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个保存数据的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>data_name (str): 数据集名称
+data_obj (object): 数据集对象</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 运行结果信息</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="module-sunflow.node">
+<span id="sunflow-node-module"></span><h2>sunflow.node module<a class="headerlink" href="#module-sunflow.node" title="Permalink to this heading">¶</a></h2>
+<section id="id7">
+<h3>模块介绍<a class="headerlink" href="#id7" title="Permalink to this heading">¶</a></h3>
+<p>这是一个装载函数对象的节点类，主要功能函数对象节点实例化，主要技术property描述符动态属性</p>
+<p>设计模式：</p>
+<blockquote>
+<div><p>无</p>
+</div></blockquote>
+<p>关键点：</p>
+<blockquote>
+<div><p>（1）Property描述符动态属性</p>
+</div></blockquote>
+<p>主要功能：</p>
+<blockquote>
+<div><p>（1）函数节点对象化</p>
+</div></blockquote>
+</section>
+<section id="id8">
+<h3>使用示例<a class="headerlink" href="#id8" title="Permalink to this heading">¶</a></h3>
+</section>
+<section id="id9">
+<h3>类说明<a class="headerlink" href="#id9" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="sunflow.node.Node">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sunflow.node.</span></span><span class="sig-name descname"><span class="pre">Node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sunflow.node.Node" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个装载函数对象的节点类，主要功能函数对象节点实例化，主要技术property描述符动态属性</p>
+</div></blockquote>
+<dl class="py property">
+<dt class="sig sig-object py" id="sunflow.node.Node.func">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">func</span></span><a class="headerlink" href="#sunflow.node.Node.func" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个描述符协议property动态属性获取函数对象方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>无</p>
+</dd>
+<dt>返回：</dt><dd><p>无</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sunflow.node.Node.get_func">
+<span class="sig-name descname"><span class="pre">get_func</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sunflow.node.Node.get_func" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个获取节点函数的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>无</p>
+</dd>
+<dt>返回：</dt><dd><p>node_func (object): 节点函数对象</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sunflow.node.Node.get_inputs">
+<span class="sig-name descname"><span class="pre">get_inputs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sunflow.node.Node.get_inputs" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个获取节点输入参数的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>无</p>
+</dd>
+<dt>返回：</dt><dd><p>node_inputs (list): 节点输入列表</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sunflow.node.Node.get_outputs">
+<span class="sig-name descname"><span class="pre">get_outputs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sunflow.node.Node.get_outputs" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个获取节点输出列表的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>无</p>
+</dd>
+<dt>返回：</dt><dd><p>node_outputs (list): 节点输出列表</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sunflow.node.Node.inputs">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">inputs</span></span><a class="headerlink" href="#sunflow.node.Node.inputs" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个描述符协议动态属性获取输入方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>无</p>
+</dd>
+<dt>返回：</dt><dd><p>_inputs (list): 参数属性输入</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sunflow.node.Node.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#sunflow.node.Node.name" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个描述符协议动态属性获取名称方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>无</p>
+</dd>
+<dt>返回：</dt><dd><p>_name (str): 参数属性名称</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sunflow.node.Node.outputs">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">outputs</span></span><a class="headerlink" href="#sunflow.node.Node.outputs" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个描述符协议动态属性获取输出方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>无</p>
+</dd>
+<dt>返回：</dt><dd><p>_outputs (list): 参数属性输出</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sunflow.node.Node.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sunflow.node.Node.run" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个节点运行的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>args (tuple): 输入参数元组
+kwargs (dict): 输入参数字典</p>
+</dd>
+<dt>返回：</dt><dd><p>run_result (object): 运行结果对象</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="module-sunflow.runner">
+<span id="sunflow-runner-module"></span><h2>sunflow.runner module<a class="headerlink" href="#module-sunflow.runner" title="Permalink to this heading">¶</a></h2>
+<section id="id10">
+<h3>模块介绍<a class="headerlink" href="#id10" title="Permalink to this heading">¶</a></h3>
+<p>这是一个流程调度运行类，主要功能使用数据缓存和挂载对象运行流程管道对象，主要技术操作实例化</p>
+<p>设计模式：</p>
+<blockquote>
+<div><p>无</p>
+</div></blockquote>
+<p>关键点：</p>
+<blockquote>
+<div><p>（1）数据缓存和hook技术</p>
+</div></blockquote>
+<p>主要功能：</p>
+<blockquote>
+<div><p>（1）流程调度运行器</p>
+</div></blockquote>
+</section>
+<section id="id11">
+<h3>使用示例<a class="headerlink" href="#id11" title="Permalink to this heading">¶</a></h3>
+</section>
+<section id="id12">
+<h3>类说明<a class="headerlink" href="#id12" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="sunflow.runner.BaseRunner">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sunflow.runner.</span></span><span class="sig-name descname"><span class="pre">BaseRunner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scheduler</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">catalog</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hook_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sunflow.runner.BaseRunner" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个流程调度运行器抽象类，主要功能使用数据缓存和挂载对象运行流程调度对象，主要技术操作实例化</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="sunflow.runner.BaseRunner.execute">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">execute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">is_release</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sunflow.runner.BaseRunner.execute" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个执行流程调度的抽象方法。</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>is_release (bool): 执行完节点是否清空缓存</p>
+</dd>
+<dt>返回：</dt><dd><p>无</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sunflow.runner.SequentialRunner">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sunflow.runner.</span></span><span class="sig-name descname"><span class="pre">SequentialRunner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scheduler</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">catalog</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hook_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sunflow.runner.SequentialRunner" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#sunflow.runner.BaseRunner" title="sunflow.runner.BaseRunner"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseRunner</span></code></a></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个流程管道运行器具体实现类，主要功能使用数据缓存和挂载对象运行流程管道对象，主要技术操作实例化</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="sunflow.runner.SequentialRunner.execute">
+<span class="sig-name descname"><span class="pre">execute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">is_release</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sunflow.runner.SequentialRunner.execute" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个执行流程管道的具体实现方法，需要使用scheduler对象、catalog对象和hook_manager对象</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>is_release (bool): 执行完节点是否清空缓存</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 运行结果信息</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="module-sunflow.scheduler">
+<span id="sunflow-scheduler-module"></span><h2>sunflow.scheduler module<a class="headerlink" href="#module-sunflow.scheduler" title="Permalink to this heading">¶</a></h2>
+<section id="id13">
+<h3>模块介绍<a class="headerlink" href="#id13" title="Permalink to this heading">¶</a></h3>
+<p>这是一个调度管理类，主要功能组合节点，形成执行流程；主要技术内部方法和魔法方法</p>
+<p>设计模式：</p>
+<blockquote>
+<div><p>无</p>
+</div></blockquote>
+<p>关键点：</p>
+<blockquote>
+<div><p>（1）属性功能</p>
+</div></blockquote>
+<p>主要功能：</p>
+<blockquote>
+<div><p>（1）功能节点管理</p>
+</div></blockquote>
+</section>
+<section id="id14">
+<h3>使用示例<a class="headerlink" href="#id14" title="Permalink to this heading">¶</a></h3>
+</section>
+<section id="id15">
+<h3>类说明<a class="headerlink" href="#id15" title="Permalink to this heading">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="sunflow.scheduler.Pipeline">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sunflow.scheduler.</span></span><span class="sig-name descname"><span class="pre">Pipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sunflow.scheduler.Pipeline" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个流程管理类，主要功能组合节点，形成执行流程；主要技术内部方法和魔法方法</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="sunflow.scheduler.Pipeline.inputs">
+<span class="sig-name descname"><span class="pre">inputs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sunflow.scheduler.Pipeline.inputs" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个列举流程管道中输入参数的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>无</p>
+</dd>
+<dt>返回：</dt><dd><p>inputs (orderdict): 输入参数有序字典</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sunflow.scheduler.Pipeline.names">
+<span class="sig-name descname"><span class="pre">names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sunflow.scheduler.Pipeline.names" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个列举流程管道中节点名称的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>无</p>
+</dd>
+<dt>返回：</dt><dd><p>names (list): 节点名称列表</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sunflow.scheduler.Pipeline.outputs">
+<span class="sig-name descname"><span class="pre">outputs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sunflow.scheduler.Pipeline.outputs" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一格列举流程管道中输出参数的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>无</p>
+</dd>
+<dt>返回：</dt><dd><p>outputs (orderdict): 输出参数有序字典</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="module-sunflow">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-sunflow" title="Permalink to this heading">¶</a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="code" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2023, shihua.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

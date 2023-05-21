@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: sunflow
+Version: 0.1.1
+Summary:  Sunflow is a workflow management tool that provides fast organization of algorithm applications, primarily using pluggy based hook technology.
+Author: shihua
+Author-email: 15021408795@163.com
+License: MIT
+Requires-Python: >=3.10.9

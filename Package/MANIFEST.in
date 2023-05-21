@@ -1,0 +1,3 @@
+include sunflow/doc/README.mdown
+include sunflow/sunflow_config.yaml
+graft sunflow/test
